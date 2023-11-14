@@ -12,11 +12,7 @@ A 64-bit distributed globally unique ID generation service, using a snowflake-li
 
 ## 64-bit ID Description
 
- 0                      32 37     40 43     48       64
-+------------------------+--------+----+-----+--------+
-|       Timestamp        | ZoneID |DcID|MachineID|BucketID+Counter|
-+------------------------+--------+----+-----+--------+
-|<--- 32 bits --->|<-- 5 bits -->|<-- 3 bits -->|<-- 3 bits -->|<-- 5 bits -->|<-- 16 bits -->|
+![ID arch](./arch.png)
 
 - Timestamp: High 32 bits, represents the current timestamp accurate to seconds.
 - ZoneID: 5 bits, represents the zone ID, globally divided into 32 regions.
